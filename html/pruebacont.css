@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+body {
+    background: radial-gradient(circle at 50% 50%, #0f2027, #203a43, #2c5364);
+    gap: 30px; /* Distancia entre contendores*/
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* GENERAL */
+
+/* Espacio de 20px */
+.space {
+    display: inline-block;
+    width: 20px; /* Ajusta según necesites */
+}
+
+/* Contenedores */
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 1000px;
+    height: 220px;
+    
+    background-color: #ffffff;
+    padding: 1px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sub-contenedores .caja {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.sub-contenedores .caja:first-child {
+    margin-left: 0;
+}
+
+.sub-contenedores .caja:last-child {
+    margin-right: 0;
+}
+
+/* -- Icono -- */
+.flag-icon {
+    width: 1em; /* Ajusta este valor según necesites */
+    height: auto; /* Mantiene la proporción de la imagen */
+    vertical-align: middle; /* Alinea verticalmente con el texto */
+    margin-right: 5px; /* Espacio entre la imagen y el texto */
+}
+
+/* -- Texto -- */
+.Sub-titulos-cajas {
+    font-size: 1.5rem;
+    color: #117c94;
+    margin-bottom: 8px;
+    padding-top: 5px;
+    text-decoration: underline;
+}
+
+.Sub-titulos {
+    color: #000000;
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    text-decoration: underline;
+}
+
+.Sub-sub-titulos {
+    color: #000000;
+    font-size: 1.2rem;
+    margin-bottom: 7px;
+    padding-top: 5px;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.Texto {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.Txt1 {
+    font-size: 0.9rem;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.Txt2 {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 5px;
+    margin-top: 15px;
+
+}
+
+/* -- Colores -- */
+.subtitulo1 {
+    --color: hsl(198, 81%, 65%); /* Color base */
+    --color-light: hsl(199, 51%, 45%); /* Más claro */
+    --color-dark: hsl(198, 100%, 37%); /* Más oscuro */
+
+    color: var(--color);
+    animation: colorChange 2s infinite alternate;
+    animation-delay: 3s;
+}
+
+.subtitulo2 {
+    --color: hsl(231, 65%, 60%); /* Color base */
+    --color-light: hsl(231, 53%, 43%); /* Más claro */
+    --color-dark: hsl(231, 86%, 48%); /* Más oscuro */
+
+    color: var(--color);
+    animation: colorChange 2s infinite alternate;
+    animation-delay: 5s;
+}
+
+.subtitulo3 {
+    --color: rgb(187, 70, 195); 
+    --color-light: rgb(174, 66, 180); 
+    --color-dark: rgb(214, 0, 230); 
+
+    color: var(--color);
+    animation: colorChange 2s infinite alternate;
+    animation-delay: 8s;
+}
+
+.subtitulo4 {
+    --color: rgb(205, 52, 108); 
+    --color-light: rgb(204, 73, 121); 
+    --color-dark: rgb(255, 0, 93); 
+
+    color: var(--color);
+    animation: colorChange 2s infinite alternate;
+    animation-delay: 10s;
+}
+
+@keyframes colorChange {
+    0% {
+        color: var(--color);
+    }
+    33% {
+        color: var(--color-light);
+    }
+    67% {
+        color: var(--color-dark);
+    }
+    100% {
+        color: var(--color);
+    }
+}
+
+/* Contenedor 1 */
+.Contenedor1 {
+    width: 60%;
+    height: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+
+    margin-bottom: auto; /* Espacio debajo del contenedor */
+    margin-top: auto;
+}
+
+.profile-image{ /* Rectangulo Imagen: Tamaño*/
+    width: 35%;
+    height: 100%;
+    background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-top-right-radius: 10px; /* Redondear la esquina superior derecha */
+    border-bottom-right-radius: 10px; /* Redondear la esquina inferior derecha */
+}
+
+.profile-image img{ /* Imagen: Tamaño, Orientación, Borde */
+    width: 50%;
+    border-radius: 50%;
+    border: 4px solid white;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+    50%{
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+    }
+    100%{
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+}
+
+.gradient-text {
+    font-size: 2.8rem;
+    background: linear-gradient(135deg, #12c2e9, #c471ed, #f64f59);
+    -webkit-background-clip: text;
+    z-index: 2; 
+    color: transparent;
+    margin-bottom: 8px;
+    padding-left: 50px;
+    position: relative;
+}
+
+.gradient-text::before {
+    content: 'Steve Portella'; /* Duplicar el texto */
+    position: absolute;
+    top: 0;
+    left: 50px; /* Ajustar según necesites */
+    z-index: 1; /* Envía la sombra detrás */
+    font-size: 2.8rem;
+    color: black; /* Sombra en color negro */
+    opacity: 0.2;
+    text-shadow: 2.5px 2.5px 0 black; /* Sombra de 2px a la derecha y abajo */
+}
+
+.Titulo{
+    font-size: 1.2rem;
+    color: #0f2027;
+    margin-bottom: 5px;
+    padding-left: 50px;
+}
+
+.Ubicación{
+    font-size: 1.2rem;
+    color: #0f2027;
+    margin-bottom: 5px;
+    padding-left: 50px;
+}
+
+/* Contenedor de cajas */
+.sub-contenedores {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    
+    width: 1000px;
+    height: 300px;
+
+    background-color: transparent; /* Fondo con 50% de transparencia */
+    padding: 1px; /* Espaciado interno si lo deseas */
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    margin-bottom: auto; /* Espacio debajo del contenedor */
+}
+
+.caja {
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #ffffff;
+    color: white;
+    border-radius: 10px;
+
+    padding: 30px;
+}
+
+.skill-bar-container {
+    width: 100%; /* Mantiene el mismo ancho */
+}
+
+.skill-bar{
+    width: 100%;
+    height: 10px;
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.211);
+    border-radius: 30px;
+    
+    position: relative;
+    
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    animation: pulse2 2s infinite;
+}
+
+.skill-level {
+    height: 100%;
+    background: linear-gradient(90deg, #f64f59, #c471ed, #12c2e9);
+    border-radius: 30px;
+}
+
+@keyframes skill-fill{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+/* Contenedor 2 */
+.Contenedor2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 1000px;
+    height: auto;
+    
+    background-color: #ffffff;
+    padding: 1px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    margin-bottom: auto; /* Espacio debajo del contenedor */
+}
+
+.conten2 {
+    width: 100%;
+    height: 100%; /* Ajusta según el contenido */
+    
+    display: flex;
+    flex-direction: column; /* Coloca elementos en una columna */
+    justify-content: center;
+        
+    border-radius: 10px; 
+
+    padding: 40px;
+    margin-bottom: auto; /* Espacio debajo del contenedor */
+}
+
+/* Contenedor 3 */
+.Contenedor3 {
+    width: 1000px;
+    height: auto;
+    
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #ffffff;
+    padding: 1px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    padding: 40px;
+
+    margin-bottom: auto; /* Espacio debajo del contenedor */
+}
+
+.sub-contenedor3 {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    
+    width: 920px;
+    height: auto;
+
+    background-color: #ffffff; /* Fondo con 50% de transparencia */
+    padding: 0px; /* Espaciado interno si lo deseas */
+}
+
+.caja2 {
+    width: 260px;
+    height: auto;
+
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #ffffff;
+    color: white;
+    border-radius: 10px;
+}
+
+.caja2:not(:last-child)::after {
+    height: 290px;
+    width: 8px; /* Grosor de la línea */
+    overflow: hidden;
+
+    content: '';
+    position: absolute;
+    right: -33px; /* Ajusta el espacio según necesites */
+    top: 0;
+    
+    background: linear-gradient(180deg, #f64f59, #c471ed, #12c2e9);
+    border-radius: 30px;
+
+    animation: pulse2 2s infinite;
+}
+
+@keyframes pulse2 {
+    0%{
+        box-shadow: 0 0 20px rgba(83, 83, 83, 0.6);
+    }
+    50%{
+        box-shadow: 0 0 20px rgba(83, 83, 83, 0.9);
+    }
+    100%{
+        box-shadow: 0 0 20px rgba(83, 83, 83, 0.6);
+    }
+}
+
+/* Contenedor 4 */
+.Contenedor4 {
+    width: 1000px;
+    height: auto;
+    margin-bottom: 20px; /* Espacio debajo del contenedor */
+    
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #ffffff;
+    padding: 1px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+    padding: 40px;
+    margin-bottom: auto;
+}
+
+.sub-contenedor4 {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    
+    width: 920px;
+    height: auto;
+
+    background-color: #ffffff; /* Fondo con 50% de transparencia */
+    padding: 0px; /* Espaciado interno si lo deseas */
+}
+
+.caja3 {
+    width: 420px;
+    height: auto;
+
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #ffffff;
+    color: white;
+    border-radius: 10px;
+}
